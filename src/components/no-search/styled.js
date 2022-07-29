@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
 
   h1 {
     font-weight: bold;
+    color:#fff;
     font-size: 32px;
   }
 `;

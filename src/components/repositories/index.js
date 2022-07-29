@@ -1,7 +1,19 @@
 import React, { useEffect, useState } from "react";
 import useGithub from "../../hooks/github-hooks";
-import RepositoryItem from "../repository-item";
 import * as S from "./styled";
+
+/* Itens do repositorio */
+const RepositoryItem = ({ name, linkToRepo, fullName }) => {
+  return (
+    <S.Wrapper>
+      <S.WrapperTitle>{name}</S.WrapperTitle>
+      <S.WrapperFullName>full name:</S.WrapperFullName>
+      <S.WrapperLink href={linkToRepo} target="_blank" rel="noreferrer">
+        {fullName}
+      </S.WrapperLink>
+    </S.Wrapper>
+  );
+};
 
 const Repositories = () => {
   const { githubState, getUserRepos, getUserStarred } = useGithub();
